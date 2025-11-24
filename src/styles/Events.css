@@ -1,0 +1,37 @@
+.events-header {
+  padding: 8rem 0 6rem;
+  background: linear-gradient(to bottom, var(--color-bg), #1a1a1a);
+  text-align: center;
+  border-bottom: 1px solid var(--color-gold-dim);
+}
+
+.events-intro {
+  max-width: 700px;
+  margin: 1rem auto 0;
+  font-size: 1.3rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.calendar-section {
+  background-color: var(--color-bg);
+  padding: 4rem 0;
+}
+
+.upcoming-events {
+  background-color: #111; /* Darker background for contrast */
+  padding: 6rem 0;
+  border-top: 1px solid var(--color-gold-dim);
+}
+
+.events-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem; /* Increased gap */
+  margin-top: 3rem;
+}
+
+.instagram-section {
+  padding: 6rem 0;
+  background-color: var(--color-bg);
+}

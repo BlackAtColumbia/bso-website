@@ -1,0 +1,68 @@
+.board-card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.board-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-gold);
+}
+
+.board-card-image {
+  width: 100%;
+  height: 300px;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.board-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.5s ease;
+}
+
+.board-card:hover .board-card-image img {
+  transform: scale(1.05);
+}
+
+.placeholder-image {
+  font-size: 5rem;
+  color: var(--color-gold);
+  font-family: var(--font-heading);
+}
+
+.board-card-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.board-name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.board-role {
+  color: var(--color-gold);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.board-bio {
+  font-size: 0.9rem;
+  color: #888;
+  line-height: 1.5;
+}

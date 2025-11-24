@@ -1,0 +1,52 @@
+.instagram-feed {
+  margin-top: 4rem;
+}
+
+.instagram-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.instagram-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.instagram-post {
+  aspect-ratio: 1;
+  background-color: #222;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  display: block;
+}
+
+.instagram-post:hover .instagram-overlay {
+  opacity: 1;
+}
+
+.instagram-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}

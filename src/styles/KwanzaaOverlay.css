@@ -1,0 +1,228 @@
+.kwanzaa-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  animation: fadeInOverlay 0.5s forwards;
+  overflow: hidden;
+}
+
+.kwanzaa-content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 800px;
+  height: 85vh;
+  background: linear-gradient(145deg, #1a1a1a, #000);
+  border: 1px solid var(--color-gold);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 50px rgba(212, 175, 55, 0.2);
+  position: relative;
+}
+
+.kwanzaa-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--color-gold);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.kwanzaa-close-btn:hover {
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.kwanzaa-video-section {
+  flex: none;
+  width: 100%;
+  height: 45%; /* Adjust video height ratio */
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.kwanzaa-mute-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.kwanzaa-mute-btn:hover {
+  background: var(--color-gold);
+  color: #000;
+  transform: scale(1.1);
+}
+
+.kwanzaa-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kwanzaa-text-section {
+  flex: 1;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-image: radial-gradient(circle at top right, rgba(212, 175, 55, 0.1), transparent);
+  overflow: hidden;
+}
+
+.kwanzaa-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--color-gold-dim);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.kwanzaa-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.kwanzaa-ticket-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-gold);
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.kwanzaa-ticket-btn:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.kwanzaa-description-container {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.kwanzaa-description {
+  font-family: 'Courier New', Courier, monospace; /* Typewriter font */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  white-space: pre-wrap; /* Preserve formatting */
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 1.2rem;
+  background-color: var(--color-gold);
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+/* Custom scrollbar for description container */
+.kwanzaa-description-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.kwanzaa-description-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.kwanzaa-description-container::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 4px;
+}
+
+.kwanzaa-description-container::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes fadeInOverlay {
+  to { opacity: 1; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .kwanzaa-content {
+    width: 95%;
+    height: 90vh;
+  }
+
+  .kwanzaa-video-section {
+    height: 35%;
+  }
+  
+  .kwanzaa-text-section {
+    padding: 1.5rem;
+  }
+
+  .kwanzaa-header {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .kwanzaa-title {
+    font-size: 1.5rem;
+  }
+
+  .kwanzaa-ticket-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .kwanzaa-description {
+    font-size: 1rem;
+  }
+}
